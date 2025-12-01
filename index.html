@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Alok Chaudhary | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+
+<!-- Neon background canvas -->
+<canvas id="bgCanvas"></canvas>
+
+<!-- Sidebar Navigation -->
+<nav class="sidebar" id="sidebar">
+    <div class="logo">
+        Alok
+        <span class="close-btn" id="closeBtn">&times;</span>
+    </div>
+    <ul>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="theme-toggle">
+        <button id="themeToggle" class="btn ghost"><i class="fas fa-moon"></i></button>
+    </div>
+</nav>
+
+<!-- Overlay for Mobile Sidebar -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- Toggle Button (Mobile) -->
+<div class="menu-toggle" id="menuToggle">&#9776;</div>
+
+<main class="snap-container">
+
+    <!-- Hero -->
+    <section id="home" class="snap-section">
+        <div class="hero-container reveal-card">
+            <div class="hero-left">
+                <h1>Hello, I’m <span>Alok Chaudhary</span></h1>
+                <p>And I'm a <span class="typing"></span></p>
+                <a href="#contact" class="btn primary nav-link">Hire Me</a>
+                <a href="alok_cv.pdf" download class="btn ghost">Download CV</a>
+            </div>
+            <div class="hero-right">
+                <img src="alok.jpg" alt="Alok Chaudhary">
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="snap-section">
+        <div class="content-card reveal-card">
+            <h2>About Me</h2>
+            <p>I’m Alok, a passionate BCA student from Siddharthnagar, India, deeply interested in the world of coding and technology.<br>
+            I love exploring new tech, experimenting with fresh ideas, and building projects that help me grow as a developer.<br><br>
+            With a strong interest in Web Development and Python Programming, I constantly push myself to learn, create, and improve.<br>
+            Every day, I try to become a better version of myself — one line of code at a time.</p>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="snap-section">
+        <div class="content-card reveal-card">
+            <h2>🎓 My Education</h2>
+            <p><strong>BCA — MLK PG College, Balrampur</strong><br>Currently pursuing my Bachelor of Computer Applications.</p>
+            <p><strong>12th — Nav Jeevan Inter College, Bidra, Siddharthnagar</strong><br>Passed in 2023 (UP Board)</p>
+            <p><strong>10th — Nav Jeevan Inter College, Bidra, Siddharthnagar</strong><br>Passed in 2021 (UP Board)</p>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="snap-section">
+        <div class="content-card reveal-card">
+            <h2>Projects</h2>
+            <ul class="project-list">
+                <li>📌 College Management System</li>
+                <li>📌 Pharmacy Management System</li>
+                <li>📌 More coming soon...</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="snap-section">
+        <div class="content-card reveal-card">
+            <h2>Skills</h2>
+            <div class="skill-item">
+                <span>Frontend: HTML, CSS, React.js</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span>Backend: PHP, MySQL, MongoDB</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span>Languages: Python, C/C++, PHP, JavaScript</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="snap-section">
+        <div class="content-card reveal-card">
+            <h2>Testimonials</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <p>"Alok is a talented developer with great problem-solving skills."</p>
+                    <cite>- John Doe, Mentor</cite>
+                </div>
+                <div class="testimonial-card">
+                    <p>"His projects are innovative and well-executed."</p>
+                    <cite>- Jane Smith, Colleague</cite>
+                </div>
+                <div class="testimonial-card">
+                    <p>"A dedicated student with a passion for coding."</p>
+                    <cite>- Avinash Sir, Teacher</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="snap-section">
+        <div class="content-card reveal-card">
+            <h2>Contact</h2>
+            <div class="social-icons">
+                <div class="social-item">
+                    <a href="https://github.com/alokchaudhary7307983-create" target="_blank"><i class="fab fa-github"></i></a>
+                    <span>GitHub</span>
+                </div>
+                <div class="social-item">
+                    <a href="https://www.linkedin.com/in/alok-chaudhary-2a13b9383?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BqDB3Up4cSYSlbaHIE90LAA%3D%3D" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <span>LinkedIn</span>
+                </div>
+                <div class="social-item">
+                    <a href="mailto:alokchaudhary7307983@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <span>Email</span>
+                </div>
+            </div>
+            <form class="contact-form" action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>Created by Alok Chaudhary | © 2025 All rights reserved.</p>
+</footer>
+
+<script>
+    // typed.js
+    new Typed(".typing", {
+        strings: ["Web Developer", "Python Programmer", "BCA Student"],
+        typeSpeed: 80,
+        backSpeed: 50,
+        loop: true
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('.nav-link').forEach(a => {
+        a.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+            document.getElementById('sidebar').classList.remove('open'); // close menu on mobile
+        });
+    });
+
+    // Reveal animation
+    const sections = document.querySelectorAll('.snap-section');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add('in-view');
+            } else {
+                entry.target.classList.remove('in-view');
+            }
+        });
+    }, {threshold: 0.5});
+    sections.forEach(section => observer.observe(section));
+
+    // Sidebar Toggle
+    const menuToggle = document.getElementById("menuToggle");
+    const sidebar = document.getElementById("sidebar");
+    const closeBtn = document.getElementById("closeBtn");
+    const sidebarOverlay = document.getElementById("sidebarOverlay");
+
+    menuToggle.addEventListener("click", () => {
+        sidebar.classList.add("open");
+        sidebarOverlay.style.display = "block";
+    });
+
+    closeBtn.addEventListener("click", () => {
+        sidebar.classList.remove("open");
+        sidebarOverlay.style.display = "none";
+    });
+
+    sidebarOverlay.addEventListener("click", () => {
+        sidebar.classList.remove("open");
+        sidebarOverlay.style.display = "none";
+    });
+
+    // ===== Contact Form Submission =====
+    const contactForm = document.querySelector('.contact-form');
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = contactForm.name.value.trim();
+        const email = contactForm.email.value.trim();
+        const message = contactForm.message.value.trim();
+
+        if (name && email && message) {
+            // Simple validation
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            // Simulate form submission (replace with actual backend call)
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
+        } else {
+            alert('Please fill in all fields.');
+        }
+    });
+
+    // ===== Neon Matrix Background =====
+    const canvas = document.getElementById("bgCanvas");
+    const ctx = canvas.getContext("2d");
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    window.addEventListener("resize", () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+    });
+
+    const lines = [];
+    for(let i=0; i<120; i++){
+        lines.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            length: Math.random() * 100 + 50,
+            speed: Math.random() * 2 + 1
+        });
+    }
+
+    function animate(){
+        ctx.fillStyle = "rgba(10,10,10,0.2)";
+        ctx.fillRect(0, 0, width, height);
+
+        ctx.strokeStyle = "#00f0ff";
+        ctx.lineWidth = 1.2;
+
+        for(let i=0; i<lines.length; i++){
+            let line = lines[i];
+            ctx.beginPath();
+            ctx.moveTo(line.x, line.y);
+            ctx.lineTo(line.x, line.y + line.length);
+            ctx.stroke();
+
+            line.y += line.speed;
+            if(line.y > height) line.y = -line.length;
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    // ===== Dark Mode Toggle =====
+    const themeToggle = document.getElementById("themeToggle");
+    const body = document.body;
+    const icon = themeToggle.querySelector("i");
+
+    themeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        if (body.classList.contains("dark-mode")) {
+            icon.className = "fas fa-sun";
+            // Update CSS variables for dynamic theme
+            document.documentElement.style.setProperty('--bg', '#000000');
+            document.documentElement.style.setProperty('--card', '#0a0a0a');
+            document.documentElement.style.setProperty('--accent', '#ff00ff');
+            document.documentElement.style.setProperty('--muted', '#ffffff');
+        } else {
+            icon.className = "fas fa-moon";
+            document.documentElement.style.setProperty('--bg', '#0a0a0a');
+            document.documentElement.style.setProperty('--card', '#111111');
+            document.documentElement.style.setProperty('--accent', '#00f0ff');
+            document.documentElement.style.setProperty('--muted', '#e0e0e0');
+        }
+    });
+</script>
+
+</body>
+</html>
